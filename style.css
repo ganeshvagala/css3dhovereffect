@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(73, 70, 70);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+ul li{
+    display: inline-block;
+    transform-style: preserve-3d;
+}
+ul li a{
+    columns: rgb(14, 14, 14);
+    font-size: 16px;
+    font-family: arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+
+}
+ul li a span{
+    display: block;
+    padding: 15px 20px;
+}
+ul li a span:before{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f80404;
+    color: #fff;
+    padding: 15px 20px;
+    transform: .3s;
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom;
+}
+ul li a span:hover:before{
+    transform: rotateX(0deg) translateY(0px);
+
+}
